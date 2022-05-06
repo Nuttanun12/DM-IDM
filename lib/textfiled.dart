@@ -1,4 +1,6 @@
+import 'package:dm_idm/main.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Userfiled extends StatelessWidget {
   final title;
@@ -11,16 +13,22 @@ class Userfiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.6,
+      width: screenWidth * 0.69,
       child: TextField(
         decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-          prefixIcon: iconinput,
-          labelText: title,
-        ),
+            fillColor: HexColor('ffffff'),
+            filled: true,
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+            contentPadding: EdgeInsets.symmetric(horizontal: 0),
+            prefixIcon: iconinput,
+            labelText: title,
+            labelStyle: TextStyle(
+              height: 2,
+            )),
         style: TextStyle(
-            fontSize: MediaQuery.of(context).size.height * 0.027,
-            height: MediaQuery.of(context).size.height * 0.001),
+          fontSize: 17.5,
+          fontWeight: FontWeight.bold,
+        ),
         obscureText: hidetext,
       ),
     );
