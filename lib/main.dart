@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hexcolor/hexcolor.dart';
-import '../Widget/textfiled.dart';
-import '../Widget/Icons.dart';
 import 'page/loginpage.dart';
 import 'dart:ui' as ui;
 
