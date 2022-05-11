@@ -34,17 +34,7 @@ class def extends StatelessWidget {
             color: HexColor("000000"),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
-            child: Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 0,
-                  ),
-                ],
-              ),
-            ),
+            child: Container(),
           ),
         ),
       ),
