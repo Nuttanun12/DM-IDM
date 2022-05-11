@@ -2,6 +2,8 @@ import 'package:dm_idm/widget/mainmenubutton.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
+import 'iqcfuntion.dart';
+import 'printbarcode.dart';
 
 class mainmenu extends StatelessWidget {
   const mainmenu({Key? key}) : super(key: key);
@@ -88,6 +90,7 @@ class mainmenu extends StatelessWidget {
                         text: "Print Barcode",
                         textcolor: (HexColor("000000")),
                         color: HexColor("FFFFFF"),
+                        topage: printbarcodepage(),
                       ),
                     ],
                   ),
@@ -101,6 +104,7 @@ class mainmenu extends StatelessWidget {
                         text: "IQC Funtion",
                         textcolor: (HexColor("000000")),
                         color: HexColor("FFFFFF"),
+                        topage: iqcfuntionpage(),
                       ),
                       Container(
                         width: 130,

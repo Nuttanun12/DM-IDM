@@ -26,7 +26,7 @@ class Userfiled extends StatelessWidget {
               height: 2.3,
             )),
         style: TextStyle(
-          fontSize: 17.5,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
         obscureText: hidetext,
