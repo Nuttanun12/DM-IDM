@@ -3,8 +3,8 @@ import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
 import '../widget/textfield.dart';
 
-class receipttypepage extends StatelessWidget {
-  const receipttypepage({Key? key}) : super(key: key);
+class inputnumberofprintlabel2 extends StatelessWidget {
+  const inputnumberofprintlabel2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class receipttypepage extends StatelessWidget {
             )),
         leadingWidth: 35,
         title: Text(
-          "Select Receipt Type",
+          "Input Number of Print Label",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: screenHeight * 0.04),
+              fontWeight: FontWeight.w900, fontSize: screenHeight * 0.03),
         ),
 
         toolbarHeight: screenHeight * 0.061,
@@ -42,11 +42,53 @@ class receipttypepage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Usertextfiled(
-                        title: "Receipt Type",
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Usertextfiled(
+                            title: "Qty/Box",
+                          ),
+                          Container(
+                            width: screenWidth * 0.084,
+                            alignment: Alignment.center,
+                            child: Text(
+                              "EA",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
                       ),
-                      Usertextfiled(title: "PO Number"),
-                      Usertextfiled(title: "Material"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Usertextfiled(title: "No. of Label"),
+                          Container(
+                            width: screenWidth * 0.084,
+                            alignment: Alignment.center,
+                          )
+                        ],
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Usertextfiled(title: "Total Qty"),
+                          Container(
+                            width: screenWidth * 0.084,
+                            alignment: Alignment.center,
+                            child: Text(
+                              "EA",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -70,7 +112,9 @@ class receipttypepage extends StatelessWidget {
                             width: 127.5,
                             height: 32.5,
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
                                 style: TextButton.styleFrom(
                                     primary: HexColor("FFFFFF"),
                                     textStyle: TextStyle(
