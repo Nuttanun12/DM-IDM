@@ -1,7 +1,9 @@
-import 'package:dm_idm/page/selectreceiptype.dart';
+import 'package:dm_idm/page/forgoodreceiptpage1.dart';
+import 'package:dm_idm/page/forinventorypage1.dart';
+import 'package:dm_idm/page/print1dbarcode.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'selectreceiptype.dart';
+import 'forgoodreceiptpage1.dart';
 import '../main.dart';
 
 class printbarcodepage extends StatelessWidget {
@@ -82,7 +84,13 @@ class printbarcodepage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        printbarcodeinventory()));
+                          },
                           child: Text(
                             "For Inventory",
                             style: TextStyle(
@@ -103,7 +111,12 @@ class printbarcodepage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => print1dbarcode()));
+                          },
                           child: Text(
                             "Print 1D Barcode",
                             style: TextStyle(
