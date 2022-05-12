@@ -1,4 +1,3 @@
-import 'package:dm_idm/page/forgoodreceiptpage3.dart';
 import 'package:dm_idm/page/forinventorypage2.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -34,6 +33,7 @@ class printbarcodeinventory extends StatelessWidget {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+              elevation: 20,
               color: HexColor("000000"),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(35)),

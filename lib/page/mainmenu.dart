@@ -4,6 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
 import 'iqcfuntion.dart';
 import 'printbarcode.dart';
+import 'canceldoumentpage.dart';
 
 class mainmenu extends StatelessWidget {
   const mainmenu({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class mainmenu extends StatelessWidget {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+            elevation: 20,
             color: HexColor("000000"),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
@@ -121,6 +123,7 @@ class mainmenu extends StatelessWidget {
                         text: "Cancel Docu",
                         textcolor: (HexColor("FFFFFF")),
                         color: HexColor("C32C2C"),
+                        topage: formclassancesterpage(),
                       ),
                       Container(
                         width: 130,

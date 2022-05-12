@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import '../main.dart';
 
 class printbarcodefield extends StatelessWidget {
   final title;

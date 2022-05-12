@@ -2,7 +2,6 @@ import 'package:dm_idm/page/forgoodreceiptpage3.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
-import '../widget/textfield.dart';
 import '../widget/printbarcodefield.dart';
 
 class printbarcodeforgoodreciptpage extends StatelessWidget {
@@ -34,13 +33,14 @@ class printbarcodeforgoodreciptpage extends StatelessWidget {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+              elevation: 20,
               color: HexColor("000000"),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(35)),
               child: Column(
                 children: [
                   Container(
-                    height: screenHeight * 0.5,
+                    height: screenHeight * 0.49,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
