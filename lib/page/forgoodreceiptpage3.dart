@@ -32,13 +32,14 @@ class inputnumberofprintlabel extends StatelessWidget {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+            elevation: 20,
             color: HexColor("000000"),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
             child: Column(
               children: [
                 Container(
-                  height: screenHeight * 0.5,
+                  height: screenHeight * 0.49,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

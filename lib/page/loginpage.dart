@@ -53,6 +53,7 @@ class _LoginpageState extends State<Loginpage> {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+            elevation: 20,
             color: HexColor("000000"),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),

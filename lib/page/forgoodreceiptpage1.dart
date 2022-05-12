@@ -1,13 +1,19 @@
 import 'package:dm_idm/page/forgoodreceiptpage2..dart';
-import 'package:dm_idm/page/forgoodreceiptpage3.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
 import '../widget/textfield.dart';
 
-class receipttypepage extends StatelessWidget {
+String dropdownValue = 'Receipt Type';
+
+class receipttypepage extends StatefulWidget {
   const receipttypepage({Key? key}) : super(key: key);
 
+  @override
+  State<receipttypepage> createState() => _receipttypepageState();
+}
+
+class _receipttypepageState extends State<receipttypepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,18 +40,39 @@ class receipttypepage extends StatelessWidget {
           height: screenHeight * 0.794,
           width: screenWidth * 0.88,
           child: Card(
+            elevation: 20,
             color: HexColor("000000"),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
             child: Column(
               children: [
                 Container(
-                  height: screenHeight * 0.5,
+                  height: screenHeight * 0.49,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Usertextfiled(
-                        title: "Receipt Type",
+                      DropdownButton<String>(
+                        value: dropdownValue,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownValue = newValue!;
+                          });
+                        },
+                        items: <String>[
+                          'Receipt Type',
+                          'One',
+                          'Two',
+                          'Tree',
+                          'Four'
+                        ].map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: TextStyle(color: HexColor("000000")),
+                            ),
+                          );
+                        }).toList(),
                       ),
                       Usertextfiled(title: "PO Number"),
                       Usertextfiled(title: "Material"),
