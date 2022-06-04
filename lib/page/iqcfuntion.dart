@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'destroyiqcpage.dart';
 import '../main.dart';
 
 class iqcfuntionpage extends StatelessWidget {
@@ -55,7 +56,12 @@ class iqcfuntionpage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => destroyiqcpage()));
+                          },
                           child: Text(
                             "Destroy IQC",
                             style: TextStyle(

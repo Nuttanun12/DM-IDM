@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
 import '../widget/textfield.dart';
+import '../widget/dropdownbutton.dart';
 
 String dropdownValue = 'Receipt Type';
 
@@ -51,29 +52,7 @@ class _receipttypepageState extends State<receipttypepage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      DropdownButton<String>(
-                        value: dropdownValue,
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            dropdownValue = newValue!;
-                          });
-                        },
-                        items: <String>[
-                          'Receipt Type',
-                          'One',
-                          'Two',
-                          'Tree',
-                          'Four'
-                        ].map<DropdownMenuItem<String>>((String value) {
-                          return DropdownMenuItem<String>(
-                            value: value,
-                            child: Text(
-                              value,
-                              style: TextStyle(color: HexColor("000000")),
-                            ),
-                          );
-                        }).toList(),
-                      ),
+                      dropdownbutton(dropdownValue: dropdownValue),
                       Usertextfiled(title: "PO Number"),
                       Usertextfiled(title: "Material"),
                       Row(
