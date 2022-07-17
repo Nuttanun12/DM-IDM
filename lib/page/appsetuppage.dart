@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../main.dart';
 
-class destroyiqcpage extends StatelessWidget {
-  const destroyiqcpage({Key? key}) : super(key: key);
+class appsetuppage extends StatelessWidget {
+  const appsetuppage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class destroyiqcpage extends StatelessWidget {
               )),
           leadingWidth: 35,
           title: Text(
-            "Destroy IQC",
+            "Application Setup",
             style: TextStyle(
                 fontWeight: FontWeight.w900, fontSize: screenHeight * 0.04),
           ),
@@ -31,7 +31,7 @@ class destroyiqcpage extends StatelessWidget {
             Container(
               alignment: Alignment.topCenter,
               child: Container(
-                height: screenHeight * 0.24,
+                height: screenHeight * 0.15,
                 width: screenWidth * 1,
                 child: Card(
                   elevation: 20,
@@ -41,112 +41,11 @@ class destroyiqcpage extends StatelessWidget {
                           bottomLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20))),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Plant :",
-                            style: TextStyle(
-                                color: HexColor("FFFFFF"),
-                                fontWeight: FontWeight.w800,
-                                fontSize: 13),
-                          ),
-                          Container(
-                            width: screenWidth * 0.69,
-                            child: Container(
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: screenWidth * 0.25,
-                                  ),
-                                  Text(
-                                    "Sloc :",
-                                    style: TextStyle(
-                                        color: HexColor("FFFFFF"),
-                                        fontWeight: FontWeight.w800,
-                                        fontSize: 13),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Material :",
-                            style: TextStyle(
-                                color: HexColor("FFFFFF"),
-                                fontWeight: FontWeight.w800,
-                                fontSize: 13),
-                          ),
-                          Container(
-                            width: screenWidth * 0.69,
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Vendort :",
-                            style: TextStyle(
-                                color: HexColor("FFFFFF"),
-                                fontWeight: FontWeight.w800,
-                                fontSize: 13),
-                          ),
-                          Container(
-                            width: screenWidth * 0.69,
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Vend Batch :",
-                            style: TextStyle(
-                                color: HexColor("FFFFFF"),
-                                fontWeight: FontWeight.w800,
-                                fontSize: 13),
-                          ),
-                          Container(
-                            width: screenWidth * 0.69,
-                            child: Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: screenWidth * 0.48,
-                                  ),
-                                  SizedBox(
-                                    height: screenHeight * 0.035,
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      child: Text(
-                                        'Scan',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w800),
-                                      ),
-                                      style: ElevatedButton.styleFrom(
-                                        primary: HexColor("2D6D17"),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        elevation: 4.0,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      Text(
+                        "WebService IP :",
+                        style: TextStyle(color: HexColor("FFFFFF")),
+                      )
                     ],
                   ),
                 ),
@@ -154,7 +53,7 @@ class destroyiqcpage extends StatelessWidget {
             ),
             Center(
               child: Container(
-                height: screenHeight * 0.6,
+                height: screenHeight * 0.69,
                 width: screenWidth * 1,
                 child: Card(
                   color: HexColor("000000"),
@@ -216,7 +115,7 @@ class destroyiqcpage extends StatelessWidget {
                                           height: 30.0,
                                           child: Center(
                                             child: Text(
-                                              'l#',
+                                              'ID',
                                               style: TextStyle(
                                                   color: HexColor("FFFFFF"),
                                                   fontWeight: FontWeight.w700),
@@ -244,7 +143,7 @@ class destroyiqcpage extends StatelessWidget {
                                           height: 30.0,
                                           child: Center(
                                             child: Text(
-                                              'InspLotNo',
+                                              'Description',
                                               style: TextStyle(
                                                   color: HexColor("FFFFFF"),
                                                   fontWeight: FontWeight.w700),
@@ -272,7 +171,7 @@ class destroyiqcpage extends StatelessWidget {
                                           height: 30.0,
                                           child: Center(
                                             child: Text(
-                                              'Batch',
+                                              'PrinterIP',
                                               style: TextStyle(
                                                   color: HexColor("FFFFFF"),
                                                   fontWeight: FontWeight.w700),
@@ -301,7 +200,7 @@ class destroyiqcpage extends StatelessWidget {
                                           height: 30.0,
                                           child: Center(
                                             child: Text(
-                                              'InspQty',
+                                              'Default',
                                               style: TextStyle(
                                                   color: HexColor("FFFFFF"),
                                                   fontWeight: FontWeight.w700),
@@ -336,7 +235,7 @@ class destroyiqcpage extends StatelessWidget {
                         primary: HexColor("FFFFFF"),
                         textStyle: TextStyle(
                             fontWeight: FontWeight.w800, fontSize: 15),
-                        backgroundColor: HexColor("C32C2C"),
+                        backgroundColor: HexColor("2D6D17"),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -344,7 +243,7 @@ class destroyiqcpage extends StatelessWidget {
                         ),
                       ),
                       child: Text(
-                        "Clear",
+                        "Save",
                         style: TextStyle(fontWeight: FontWeight.w800),
                       )),
                 ),
@@ -355,19 +254,21 @@ class destroyiqcpage extends StatelessWidget {
                   width: 100,
                   height: 30,
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       style: TextButton.styleFrom(
                         primary: HexColor("FFFFFF"),
                         textStyle: TextStyle(
                             fontWeight: FontWeight.w800, fontSize: 15),
-                        backgroundColor: HexColor("004193"),
+                        backgroundColor: HexColor("C32C2C"),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
                           ),
                         ),
                       ),
-                      child: Text("Detail",
+                      child: Text("Cancel",
                           style: TextStyle(fontWeight: FontWeight.w800))),
                 ),
               ],

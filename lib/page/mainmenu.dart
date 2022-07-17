@@ -5,6 +5,8 @@ import '../main.dart';
 import 'iqcfuntion.dart';
 import 'printbarcode.dart';
 import 'canceldoumentpage.dart';
+import 'displayinventorypage.dart';
+import 'appsetuppage.dart';
 
 class mainmenu extends StatelessWidget {
   const mainmenu({Key? key}) : super(key: key);
@@ -56,6 +58,7 @@ class mainmenu extends StatelessWidget {
                         text: "Display Inv.",
                         textcolor: (HexColor("000000")),
                         color: HexColor("FFFFFF"),
+                        topage: displayinventorypage(),
                       ),
                     ],
                   ),
@@ -74,6 +77,7 @@ class mainmenu extends StatelessWidget {
                         text: "App setup",
                         textcolor: (HexColor("000000")),
                         color: HexColor("FFFFFF"),
+                        topage: appsetuppage(),
                       ),
                     ],
                   ),

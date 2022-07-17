@@ -1,3 +1,4 @@
+import 'package:dm_idm/page/simple_table.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'page/loginpage.dart';

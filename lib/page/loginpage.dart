@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'appsetuppage.dart';
 import '../Widget/loginfiled.dart';
 import '../Widget/Icons.dart';
 import '../main.dart';
@@ -28,7 +29,7 @@ class _LoginpageState extends State<Loginpage> {
             child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => mainmenu()));
+                    MaterialPageRoute(builder: (context) => appsetuppage()));
               },
               child: CircleAvatar(
                 backgroundColor: HexColor("FFFFFF"),
